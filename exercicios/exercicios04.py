@@ -2,6 +2,7 @@ import math
 import random
 from playsound3 import playsound
 import multiprocessing
+import pygame
 
 #DESAFIO 016
 #Crie um programa que leia um número Real qualquer pelo teclado e mostre na tela a sua porção inteira.
@@ -12,19 +13,27 @@ n1 = float(input("Número Real: "))
 conversao = int(n1)
 print(f"O número {n1} tem a parte inteira {conversao}.")
 
+n1 = float(input("Número Real: "))
+conversao2 = math.trunc(n1)
+print(f"O número {n1} tem a parte inteira {conversao2}.")
+
 '''
 
 #DESAFIO 017
 #Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.
 '''
-cateto_oposto = int(input("Cateto oposto: "))
-cateto_adjacente = int(input("Cateto adjacente: "))
+cateto_oposto = float(input("Cateto oposto: "))
+cateto_adjacente = float(input("Cateto adjacente: "))
 hipotenusa = (pow(cateto_oposto, 2) + pow(cateto_adjacente, 2))
 raiz = math.sqrt(hipotenusa)
-print(f"Hipotenusa: {raiz}")
+print(f"Hipotenusa: {raiz:.2f}")
+
+cateto_oposto = float(input("Cateto oposto: "))
+cateto_adjacente = float(input("Cateto adjacente: "))
+hipotenusa2 = math.hypot(cateto_oposto, cateto_adjacente)
+print(f"Hipotenusa: {hipotenusa2:.2f}")
 
 '''
-
 #DESAFIO 018
 #Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.
 '''
@@ -58,16 +67,34 @@ aluno02 = input("Segundo aluno: ")
 aluno03 = input("Terceiro aluno: ")
 aluno04 = input("Quarto aluno: ")
 lista_de_alunos = [aluno01, aluno02, aluno03, aluno04]
-sorteados = sorted(lista_de_alunos)
-print(f"Lista de alunos: {sorteados}")
+random.shuffle(lista_de_alunos)
+print(f"Lista de alunos: {lista_de_alunos}")
 
 '''
 
 #DESAFIO 021
 #Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.
+
 '''
 play = multiprocessing.Process(target=playsound, args=("/home/ailton/Downloads/Wind.mp3",))
 play.start()
 input("Enter pra parar")
 play.terminate()
+
+'''
+'''
+if __name__ == '__main__':
+  play = multiprocessing.Process(target=playsound, args=("/home/ailton/Downloads/Wind.mp3",))
+  play.start()
+  input("Enter pra parar")
+  play.terminate()
+
+'''
+'''
+pygame.init()
+pygame.mixer.music.load("/home/ailton/Downloads/Wind.mp3")
+pygame.mixer.music.play()
+input()
+pygame.event.wait()
+
 '''
