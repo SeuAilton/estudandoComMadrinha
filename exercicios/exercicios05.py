@@ -5,7 +5,7 @@
 # > Quantas letras ao todo (sem considerar espaços).
 # > Quantas letras tem o primeiro nome.
 '''
-nome = input("None: ")
+nome = input("Nome: ").strip()
 maiusculo = nome.upper()
 minusculo = nome.lower()
 separando_o_nome = nome.split()
@@ -17,9 +17,15 @@ print(maiusculo)
 print(minusculo)
 print(calculando_quantas_letras)
 print(quantas_letras_primeiro_nome)
+'''
+'''
+nome = input("Nome: ").strip()
+print(f"Nome maúsculo {nome.upper()}")
+print(f"Nome minúsculo {nome.lower()}")
+print(f"Seu nome tem {len(nome) - nome.count(" ")} letras.")
+print(f"Seu primeiro nome tem {nome.find(" ")} letras.")
 
 '''
-
 #DESAFIO 023
 #Faça um programa que leio um número de 0 a 9999 e mostre no tela cada um dos dígitos separados.
 #Ex: Digite um número: 1834
@@ -32,35 +38,36 @@ numero = int(input("Número: "))
 
 if numero > 0 and numero <= 9999:
   unidade = numero % 10
-  dezena = (numero - unidade) / 10 % 10
-  centena = (numero - dezena) / 100 % 10
-  milhar = (numero - centena) / 1000 % 10
-  print(unidade)
-  print(int(dezena))
-  print(int(centena))
-  print(int(milhar))
+  dezena = numero // 10 % 10
+  centena = numero // 100 % 10
+  milhar = numero // 1000 % 10
+  print(f"unidade: {unidade}")
+  print(f"dezena: {dezena}")
+  print(f"centena: {centena}")
+  print(f"milhar: {milhar}")
 else:
   print("[ERROR]Digite um número entre 0 e 9999!")
 
 '''
+
 #DESAFIO 024
 #Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "SANTO".
 '''
-cidade = input("Nome da cidade: ")
+cidade = input("Nome da cidade: ").strip()
 cidade_maiusculo = cidade.upper()
 primeiro_nome_da_cidade = cidade_maiusculo.split()[0]
 achando_o_santo = primeiro_nome_da_cidade.find("SANTO")
 if achando_o_santo == -1:
-  print(f"A cidade {cidade} não começa Santo no nome.")
+  print(f"A cidade {cidade.title()} não começa Santo no nome.")
 else:
-  print(f"A cidade {cidade} começa Santo no nome.")
+  print(f"A cidade {cidade.title()} começa Santo no nome.")
 
 '''
 
 #DESAFIO 025
 #Crie um programa que leia o nome de uma pessoa e diga se ela tem "SILVA" no nome.
 '''
-nome = input("Nome: ")
+nome = input("Nome: ").strip()
 nome_maiusculo = nome.upper()
 achando_o_silva = nome_maiusculo.find("SILVA")
 if achando_o_silva == -1:
@@ -76,7 +83,7 @@ else:
 # > Em que posição ela aparece a primeira vez.
 # > Em que posição ela aparece a última vez.
 '''
-frase = input("Escreve um trem ai: ")
+frase = input("Escreve um trem ai: ").strip()
 frase_minusculo = frase.lower()
 quantos_a = frase_minusculo.count("a")
 primeira_aparicao = frase_minusculo.find("a")
@@ -93,7 +100,7 @@ print(ultima_aparicao)
 #    primeiro: Ana
 #    segundo: Souza
 '''
-nome = input("Nome: ")
+nome = input("Nome: ").strip()
 primeiro_nome = nome.split()[0]
 ultimo_nome = nome.split()[-1]
 print(primeiro_nome)
