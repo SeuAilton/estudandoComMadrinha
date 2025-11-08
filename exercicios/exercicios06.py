@@ -1,4 +1,6 @@
 import random
+from time import sleep
+from datetime import date
 
 #DESAFIO 028
 #Escreva um programa que faça o computador "pensar" em um número inteiro entre 0 e 5 e peça para o usuário tentar descobrir qual foi o número escolhido pelo computador.
@@ -6,11 +8,16 @@ import random
 '''
 numero = int(input("Escolha um número de 0 a 5: ").strip())
 numero_aleatorio = random.randint(0, 5)
+print("PROCESSANDO...")
+sleep(2)
+print("-=-" *8)
 print(f"Número sorteado {numero_aleatorio}")
+print("-=-" *8)
 if numero == numero_aleatorio:
   print("Parabéns você acertou!")
 else:
   print("Você errou!")
+print("-=-" *8)
 
 '''
 #DESAFIO 029
@@ -18,12 +25,17 @@ else:
 #Se ele ultrapassar 80Km/h, mostre uma mensagem dizendo que ele foi multado.
 #A multa vai custar R$7,00 por cada Km acima do limite.
 '''
-velocidade = random.randint(10, 110)
+#velocidade = random.randint(10, 110)
+velocidade = int(input("Velocidade: ").strip())
 if velocidade > 80:
   multa = (velocidade - 80) * 7
-  print(f"Velocidade atual {velocidade}Km/h. Você foi multado em R${multa:.2f}!")
+  print("-=-" *10)
+  print(f"Velocidade atual {velocidade}Km/h.\nVocê foi multado em R${multa:.2f}!")
+  print("-=-" *10)
 else:
-  print(f"Velocidade atual {velocidade}Km/h. Tenha uma boa viagem!")
+  print("-=-" *10)
+  print(f"Velocidade atual {velocidade}Km/h.\nTenha uma boa viagem!")
+  print("-=-" *10)
 
 '''
 #DESAFIO 030
@@ -52,10 +64,16 @@ else:
 #DESAFIO 032
 #Faça um programa que leia um ano qualquer e mostre se ele é BISSEXTO.
 '''
-ano = int(input("Digite um ano: ").strip())
+ano = int(input("Digite um ano. Digite 0 pra analizar o ano atual: ").strip())
+
+if ano == 0:
+  ano_atual = date.today().year
+  ano = ano_atual
+
 case1 = ano % 4
 case2 = ano % 100
 case3 = ano % 400
+
 if case1 == 0 and case2 != 0:
   print(f"O ano {ano} é bissexto.")
 elif case1 == 0 and case2 == 0 and case3 == 0:
