@@ -1,4 +1,6 @@
 from datetime import date
+import random
+import emoji
 
 #DESAFIO 036
 #Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa. O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar.
@@ -117,7 +119,25 @@ else:
 #- Equilátero: todos os lados iguais
 #- Isóceles: dois lados iguais
 #- Escaleno: todos os lados diferentes
+'''
+reta01 = int(input("Primeira reta: ").strip())
+reta02 = int(input("Segunda reta: ").strip())
+reta03 = int(input("Terceira reta: ").strip())
+lista = [reta01, reta02, reta03]
+ordenando = lista.sort()
+resultado = lista[0] + lista[1] 
+if resultado > lista[-1]:
+  print("É possível fazer um triângulo")
+  if reta01 == reta02 == reta03:
+    print("Triângulo equilátero")
+  elif reta01 != reta02 != reta03:
+    print("Triângulo escaleno")
+  else:
+    print("Triangulo isóceles")
+else:
+  print("Não é possível fazer um trinângulo")
 
+'''
 #DESAFIO 043
 #Desenvolva uma lógica que leia o peso e a altura de uma pessoa, calcule seu IMC e mostre seu status, de acordo com a tabela abaixo:
 #- Abaixo de 18.5: Abaixo do Peso
@@ -125,13 +145,80 @@ else:
 #- 25 até 30: Sobrepeso
 #- 30 até 40: Obesidade
 #- Acima de 40: Obesidade mórbida
+'''
+peso = float(input("Peso: ").strip())
+altura = float(input("Altura: ").strip())
+imc = peso / (altura * altura)
 
+if imc < 18.5:
+  print(f"Seu IMC: {imc:.2f}. Abaixo do peso")
+elif imc >= 18.5 and imc < 25:
+  print(f"Seu IMC: {imc:.2f}. Peso ideal")
+elif imc >= 25 and imc < 30:
+  print(f"Seu IMC: {imc:.2f}. Sobrepeso")
+elif imc >= 30 and imc < 40:
+  print(f"Seu IMC: {imc:.2f}. Obesidade")
+else:
+  print(f"Seu IMC {imc:.2f}. Obesidade mórbida")
+
+'''
 #DESAFIO 044
 #Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
-#- Á vista dinheiro/cheque: 10% de desconto
-#- Á vista no cartão: 5% de desconto
+#- À vista dinheiro/cheque: 10% de desconto
+#- À vista no cartão: 5% de desconto
 #- Em até 2x no cartão: preço normal
 #- 3x ou mais no cartão: 20% de juros
+'''
+preco = float(input("Preço do produto: R$ ").strip())
+forma_pagamento = int(input("Digite 1 para pagar à vista em dinheiro ou cheque.\nDigite 2 para pagar à vista no cartão.\nDigite 3 para pagar em até 2x no cartão.\nDigite 4 para pagar em 3x ou mais no cartão.\nForma de pagamento escolhida: ").strip())
 
+if forma_pagamento == 1:
+  desconto = preco * 0.9
+  print(f"Valor à pagar: R$ {desconto:.2f}")
+elif forma_pagamento == 2:
+  desconto = preco * 0.95
+  print(f"Valor à pagar: R$ {desconto:.2f}")
+elif forma_pagamento == 3:
+  print(f"Valor à pagar: R$ {preco:.2f}")
+else:
+  juros = preco * 1.20
+  print(f"Valor à pagar: R$ {juros:.2f}")
+
+'''
 #DESAFIO 045
 #Crie um programa que faça o computador jogar Jokenpô com você.
+'''
+tesoura = emoji.emojize(":victory_hand:")
+papel = emoji.emojize(":hand_with_fingers_splayed:")
+pedra = emoji.emojize(":raised_fist:")
+
+jogada = int(input(f"Digite 1 para jogar tesoura {tesoura} .\nDigite 2 para jogar papel {papel} .\nDigite 3 para jogar pedra {pedra}.\nJogada escolhida: ").strip())
+
+lista = [tesoura, papel, pedra]
+
+jogada_pc = random.choice(lista)
+
+if jogada == 1:
+  if jogada_pc == tesoura:
+    print(f"Ambos jogaram {tesoura}. EMPATE")
+  elif jogada_pc == papel:
+    print(f"Você jogou {tesoura} e o pc jogou {papel} . VITÓRIA")
+  else:
+    print(f"Você jogou {tesoura} e o pc jogou {pedra}. DERROTA")
+
+if jogada == 2:
+  if jogada_pc == tesoura:
+    print(f"Você jogou {papel}  e o pc jogou {tesoura}. DERROTA")
+  elif jogada_pc == papel:
+    print(f"Ambos jogaram {papel} . EMPATE")
+  else:
+    print(f"Você jogou {papel}  e o pc jogou {pedra}. VITÓRIA")
+  
+if jogada == 3:
+  if jogada_pc == tesoura:
+    print(f"Você jogou {pedra} e o pc jogou {tesoura}. VITÓRIA")
+  elif jogada_pc == papel:
+    print(f"Você jogou {pedra} e o pc jogou {papel} . DERROTA")
+  else:
+    print(f"Ambos jogaram {pedra}. EMPATE")
+'''
