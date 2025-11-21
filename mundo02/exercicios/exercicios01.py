@@ -63,13 +63,19 @@ else:
 '''
 ano = int(input("Ano de nascimento: ").strip())
 ano_atual = date.today().year
+idade = ano_atual - ano
 
-if ano_atual - ano == 18:
+if idade == 18:
+  saldo = idade - 18
   print("É hora de se alistar no exército.")
-elif ano_atual - ano < 18:
+  print(f"Você deverá se alistar no ano de {ano_atual + saldo}.")
+elif idade < 18:
+  saldo = 18 - idade
   print("Ainda não está na hora de se alistar.")
+  print(f"Seu alistamento será em {saldo} anos.")
+  print(f"Você deverá se alistar no ano de {ano_atual + saldo}.")
 else:
-  print(f"Já passou {ano_atual - ano - 18} anos do prazo para se alistar.")
+  print(f"Já passou {idade - 18} anos do prazo para se alistar.")
 
 '''
 #DESAFIO 040
@@ -104,11 +110,11 @@ idade = ano_atual - ano
 
 if idade <= 9:
   print(f"O aluno tem {idade} anos. MIRIM")
-elif idade > 9 and idade <= 14:
+elif idade <= 14:
   print(f"O aluno tem {idade} anos. INFANTIL")
-elif idade > 14 and idade <= 19:
+elif idade <= 19:
   print(f"O aluno tem {idade} anos. JUNIOR")
-elif idade > 19 and idade <= 20:
+elif idade <= 20:
   print(f"O aluno tem {idade} anos. SÊNIOR")
 else:
   print(f"O aluno tem {idade} anos. MASTER")
@@ -216,7 +222,7 @@ if jogada == 2:
   
 if jogada == 3:
   if jogada_pc == tesoura:
-    print(f"Você jogou {pedra} e o pc jogou {tesoura}. VITÓRIA")
+    print(f"Você jogou {pedra} e o pc jogou {tesoura} . VITÓRIA")
   elif jogada_pc == papel:
     print(f"Você jogou {pedra} e o pc jogou {papel} . DERROTA")
   else:
