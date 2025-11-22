@@ -1,6 +1,7 @@
 from datetime import date
 import random
 import emoji
+from time import sleep
 
 #DESAFIO 036
 #Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa. O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar.
@@ -131,15 +132,15 @@ reta02 = int(input("Segunda reta: ").strip())
 reta03 = int(input("Terceira reta: ").strip())
 lista = [reta01, reta02, reta03]
 ordenando = lista.sort()
-resultado = lista[0] + lista[1] 
+resultado = lista[0] + lista[1]
 if resultado > lista[-1]:
-  print("É possível fazer um triângulo")
+  print("É possível fazer um triângulo ", end="")
   if reta01 == reta02 == reta03:
-    print("Triângulo equilátero")
-  elif reta01 != reta02 != reta03:
-    print("Triângulo escaleno")
+    print("equilátero.")
+  elif reta01 != reta02 != reta03 != reta01:
+    print("escaleno.")
   else:
-    print("Triangulo isóceles")
+    print("isóceles.")
 else:
   print("Não é possível fazer um trinângulo")
 
@@ -157,15 +158,15 @@ altura = float(input("Altura: ").strip())
 imc = peso / (altura * altura)
 
 if imc < 18.5:
-  print(f"Seu IMC: {imc:.2f}. Abaixo do peso")
-elif imc >= 18.5 and imc < 25:
-  print(f"Seu IMC: {imc:.2f}. Peso ideal")
-elif imc >= 25 and imc < 30:
-  print(f"Seu IMC: {imc:.2f}. Sobrepeso")
-elif imc >= 30 and imc < 40:
-  print(f"Seu IMC: {imc:.2f}. Obesidade")
+  print(f"Seu IMC: {imc:.1f} Abaixo do peso")
+elif 18.5 <= imc < 25:
+  print(f"Seu IMC: {imc:.1f} Peso ideal")
+elif 25 <= imc < 30:
+  print(f"Seu IMC: {imc:.1f} Sobrepeso")
+elif 30 <= imc < 40:
+  print(f"Seu IMC: {imc:.1f} Obesidade")
 else:
-  print(f"Seu IMC {imc:.2f}. Obesidade mórbida")
+  print(f"Seu IMC {imc:.1f} Obesidade mórbida")
 
 '''
 #DESAFIO 044
@@ -180,15 +181,25 @@ forma_pagamento = int(input("Digite 1 para pagar à vista em dinheiro ou cheque.
 
 if forma_pagamento == 1:
   desconto = preco * 0.9
-  print(f"Valor à pagar: R$ {desconto:.2f}")
+  print(f"Valor à pagar: R${desconto:.2f}")
 elif forma_pagamento == 2:
   desconto = preco * 0.95
-  print(f"Valor à pagar: R$ {desconto:.2f}")
+  print(f"Valor à pagar: R${desconto:.2f}")
 elif forma_pagamento == 3:
-  print(f"Valor à pagar: R$ {preco:.2f}")
-else:
+  parcela = preco / 2
+  print(f"Sua compra será parcelada em 2x de R${parcela:.2f}")
+  print(f"Valor à pagar: R${preco:.2f}")
+elif forma_pagamento == 4:
   juros = preco * 1.20
-  print(f"Valor à pagar: R$ {juros:.2f}")
+  total_parcela = int(input("Quantas parcelas? "))
+  parcela = juros / total_parcela
+  if total_parcela >= 3:
+    print(f"Sua compra será parcelada em {total_parcela}x de R${parcela:.2f}")
+    print(f"Valor à pagar: R${juros:.2f}")
+  else:
+    print("Parcela mínima de 3x. Tente novamente.")
+else:
+  print("[ERROR] Digite uma opção válida!")
 
 '''
 #DESAFIO 045
@@ -199,6 +210,13 @@ papel = emoji.emojize(":hand_with_fingers_splayed:")
 pedra = emoji.emojize(":raised_fist:")
 
 jogada = int(input(f"Digite 1 para jogar tesoura {tesoura} .\nDigite 2 para jogar papel {papel} .\nDigite 3 para jogar pedra {pedra}.\nJogada escolhida: ").strip())
+
+print("JO")
+sleep(1)
+print("KEN")
+sleep(1)
+print("PO!!!")
+sleep(.5)
 
 lista = [tesoura, papel, pedra]
 
@@ -211,20 +229,21 @@ if jogada == 1:
     print(f"Você jogou {tesoura} e o pc jogou {papel} . VITÓRIA")
   else:
     print(f"Você jogou {tesoura} e o pc jogou {pedra}. DERROTA")
-
-if jogada == 2:
+elif jogada == 2:
   if jogada_pc == tesoura:
     print(f"Você jogou {papel}  e o pc jogou {tesoura}. DERROTA")
   elif jogada_pc == papel:
     print(f"Ambos jogaram {papel} . EMPATE")
   else:
     print(f"Você jogou {papel}  e o pc jogou {pedra}. VITÓRIA")
-  
-if jogada == 3:
+elif jogada == 3:
   if jogada_pc == tesoura:
     print(f"Você jogou {pedra} e o pc jogou {tesoura} . VITÓRIA")
   elif jogada_pc == papel:
     print(f"Você jogou {pedra} e o pc jogou {papel} . DERROTA")
   else:
     print(f"Ambos jogaram {pedra}. EMPATE")
+else:
+  print("[ERROR] Jogada inválida. Por favor selecione uma jogada válida! [ERROR]")
+
 '''
