@@ -19,9 +19,9 @@ for c in range(inicio, fim+1, passo):
   print(c)
 print("Fim")'''
 
-'''soma = 0
+soma = 0
 
 for c in range(0, 3):
   numero = int(input("Número: "))
   soma += numero
-print(soma)'''
+print(soma)
