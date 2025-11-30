@@ -3,8 +3,8 @@
 
 soma = 0
 
-for c in range(0, 6):
-  numero = int(input("Digite um número: ").strip())
+for c in range(1, 7):
+  numero = int(input(f"Digite o {c}° número: ").strip())
   if numero % 2 == 0:
     soma += numero
 print(f"A soma dos números pares é: {soma}")

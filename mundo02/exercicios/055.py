@@ -4,9 +4,9 @@
 maior = 0
 menor = 0
 
-for i in range(0, 5):
-  peso = float(input("Peso: ").strip())
-  if maior == 0 and menor == 0:
+for i in range(1, 6):
+  peso = float(input(f"Peso da {i}ª pessoa: ").strip())
+  if i == 1:
     maior = peso
     menor = peso
   if peso > maior:

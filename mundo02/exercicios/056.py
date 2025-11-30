@@ -11,23 +11,26 @@ soma = 0
 mulheres = 0
 
 for i in range(4):
+  print(f"------ {i+1}ª pessoa ------")
   nome = input("Nome: ").strip().title()
   idade = int(input("Idade: ").strip())
-  sexo = input("Sexo: ").strip().lower()
+  sexo = input("Sexo [M/F]: ").strip().lower()
 
   soma += idade
 
-  if maiscabado == 0:
-    maiscabado = idade
-  if idade > maiscabado and sexo == "masculino":
+  if i == 0 and sexo == "m":
     maiscabado = idade
     nome_maiscabado = nome
-  if sexo == "feminino" and idade < 20:
+  if idade > maiscabado and sexo == "m":
+    maiscabado = idade
+    nome_maiscabado = nome
+  if sexo == "f" and idade < 20:
     mulheres += 1
     mais_novinha = nome
 
 media = soma / 4
 
-print(f"""Média de idade do grupo: {media}
+print(f"""Média de idade do grupo: {media:.1f}
 O Homem mais velho é: {nome_maiscabado}
-Mulheres com menos de 20 anos: {mulheres}, {mais_novinha}""")
+Mulheres com menos de 20 anos: {mulheres}
+Mulher mais nova: {mais_novinha}""")
