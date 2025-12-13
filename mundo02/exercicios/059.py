@@ -29,3 +29,8 @@ while opcao != 5:
   elif opcao == 4:
     n1 = int(input("Primeiro valor: ").strip())
     n2 = int(input("Segundo valor: ").strip())
+  elif opcao == 5:
+    print("Saindo do programa...")
+  else:
+    print("[ERRO] Opção inválida!")
+

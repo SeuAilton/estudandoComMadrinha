@@ -9,8 +9,13 @@ palpites = 0
 while numero_escolhido != numero_aleatorio:
   numero_escolhido = int(input("Escolha um número de 0 a 10: ").strip())
   if numero_escolhido != numero_aleatorio:
-    print("Você ERROU!\nTente novamente.")
+    print("Você ERROU!")
     palpites += 1
+    if numero_escolhido < numero_aleatorio:
+      print("É maior... Tente novamente.")
+    else:
+      print("É menor... tente novamente.")
+
 print("-=-" *8)
 print(f"Número sorteado foi: {numero_aleatorio}")
 print("-=-" *8)
