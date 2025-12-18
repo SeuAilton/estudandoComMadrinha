@@ -15,3 +15,4 @@ for i in range(1, 8):
 
 print(f"""{maior} pessoas são maiores de idade.
 {menor} pessoas são menores de idade.""")
+

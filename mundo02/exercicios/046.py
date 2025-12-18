@@ -9,3 +9,4 @@ for c in range(10, -1, -1):
   sleep(1)
 print(emoji.emojize(":fireworks:") * 5)
 print(emoji.emojize(":sparkler:") * 5)
+

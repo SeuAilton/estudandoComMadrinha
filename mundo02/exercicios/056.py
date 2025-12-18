@@ -34,3 +34,4 @@ print(f"""Média de idade do grupo: {media:.1f}
 O Homem mais velho é: {nome_maiscabado}
 Mulheres com menos de 20 anos: {mulheres}
 Mulher mais nova: {mais_novinha}""")
+

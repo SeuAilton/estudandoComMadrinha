@@ -10,3 +10,4 @@ while n < 10:
   trem = termo + razao * n
   n += 1
   print(trem)
+

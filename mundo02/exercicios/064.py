@@ -12,3 +12,4 @@ while numero != 999:
 
 print(f"Foram digitador {contador} numeros.")
 print(f"A soma entre os numeros digitados é: {soma}")
+

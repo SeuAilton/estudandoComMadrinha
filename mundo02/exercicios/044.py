@@ -29,3 +29,4 @@ elif forma_pagamento == 4:
     print("Parcela mínima de 3x. Tente novamente.")
 else:
   print("[ERROR] Digite uma opção válida!")
+

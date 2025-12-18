@@ -23,3 +23,4 @@ print("Você ACERTOU!")
 print("-=-" *8)
 print(f"Foram no total {palpites} palpites.")
 print("-=-" *8)
+

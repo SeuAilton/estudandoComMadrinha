@@ -32,3 +32,4 @@ while True:
 print(f"Total gasto na compra: R${soma:.2f}")
 print(f"Produtos que custam mais de R$1000,00: {caro}")
 print(f"Produto mais barato: {mais_barato.capitalize()}")
+

@@ -21,3 +21,4 @@ while sexo not in "MF":
 
 print(f"Sexo {sexo} registrado com sucesso.")
 '''
+

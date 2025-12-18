@@ -12,3 +12,4 @@ while True:
 
 print(f"Foram digitados {c} números.")
 print(f"A soma dos números é: {s}.")
+

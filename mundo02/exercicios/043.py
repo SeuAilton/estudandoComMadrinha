@@ -20,3 +20,4 @@ elif 30 <= imc < 40:
   print(f"Seu IMC: {imc:.1f} Obesidade")
 else:
   print(f"Seu IMC {imc:.1f} Obesidade mórbida")
+

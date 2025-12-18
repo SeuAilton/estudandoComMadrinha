@@ -45,3 +45,4 @@ elif jogada == 3:
     print(f"Ambos jogaram {pedra}. EMPATE")
 else:
   print("[ERROR] Jogada inválida. Por favor selecione uma jogada válida! [ERROR]")
+

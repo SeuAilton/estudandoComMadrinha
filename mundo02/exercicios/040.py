@@ -14,3 +14,4 @@ elif media >= 5 and media <= 6.9:
   print(f"Média {media:.1f} RECUPERAÇÃO!")
 else:
   print(f"Média {media:.1f} APROVADO!")
+

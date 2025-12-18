@@ -16,3 +16,4 @@ for i in range(1, 6):
 
 print(f"""Maior peso: {maior:.1f}kg
 Menor peso: {menor:.1f}kg""")
+

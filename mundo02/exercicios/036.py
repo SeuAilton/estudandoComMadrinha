@@ -14,3 +14,4 @@ if prestacao < salario * 0.3:
 else:
   print(f"Valor da prestação é R${prestacao:.2f}")
   print("Impréstimo negado!")
+  

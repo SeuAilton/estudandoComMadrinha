@@ -38,3 +38,4 @@ while True:
       break
 
 print(f"No total foram {vitoria} vitorias consecutivas.")
+

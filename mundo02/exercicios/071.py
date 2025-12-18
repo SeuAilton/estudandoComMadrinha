@@ -27,3 +27,4 @@ print(f"""Foram usadas:
 {cedula_20} cédulas de R$20.
 {cedula_10} cédulas de R$10.
 {cedula_1} cédulas de R$01.""")
+

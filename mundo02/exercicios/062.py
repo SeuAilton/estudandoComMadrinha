@@ -17,3 +17,4 @@ while n < t:
       t += resposta
     else:
       n = t
+

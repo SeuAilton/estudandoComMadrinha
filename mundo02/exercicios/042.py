@@ -20,3 +20,4 @@ if resultado > lista[-1]:
     print("isóceles.")
 else:
   print("Não é possível fazer um trinângulo")
+

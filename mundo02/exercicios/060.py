@@ -12,3 +12,4 @@ while validador <= n:
   validador += 1
 
 print(f"{n}! = {contador}")
+

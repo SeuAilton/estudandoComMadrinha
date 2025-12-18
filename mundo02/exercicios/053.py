@@ -25,3 +25,4 @@ if inverso == junto:
 else:
   print("Não é um palíndromo!")
 '''
+

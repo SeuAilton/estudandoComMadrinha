@@ -25,3 +25,4 @@ media = soma / quantidade
 print(f"A média entres os valores digitados foi {media:.1f}")
 print(f"O maior número digitado: {maior}")
 print(f"Menor número digitado: {menor}")
+

@@ -35,3 +35,4 @@ while True:
 print(f"Pessoas com mais de 18 anos: {pessoas18}.")
 print(f"Homens cadastrados no sistema: {homi}.")
 print(f"Mulheres cadastradas com menos de 20 anos: {novinhas}.")
+

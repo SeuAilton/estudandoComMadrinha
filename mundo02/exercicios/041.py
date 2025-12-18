@@ -22,3 +22,4 @@ elif idade <= 20:
   print(f"O aluno tem {idade} anos. SÊNIOR")
 else:
   print(f"O aluno tem {idade} anos. MASTER")
+

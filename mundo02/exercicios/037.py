@@ -13,3 +13,4 @@ elif escolha == 2:
   print(f"O {numero} convertido para octal {numero:o}.")
 else:
   print(f"O {numero} convertido para hexadecimal {numero:x}.")
+

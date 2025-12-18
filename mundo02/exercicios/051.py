@@ -8,3 +8,4 @@ final = termo + razao * 10 #fórmula = "an = a1 + r·(n-1)"
 
 for i in range(termo, final, razao):
   print(i)
+

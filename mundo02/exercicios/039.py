@@ -22,3 +22,4 @@ elif idade < 18:
   print(f"Você deverá se alistar no ano de {ano_atual + saldo}.")
 else:
   print(f"Já passou {idade - 18} anos do prazo para se alistar.")
+
