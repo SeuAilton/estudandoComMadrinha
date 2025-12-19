@@ -11,7 +11,7 @@ while True:
   produto = input("Digite o nome do produto: ").strip().lower()
   preco = float(input("Valor do produto: R$").strip())
 
-  if soma == 0:
+  if soma == 0 or preco < barato:
     mais_barato = produto
     barato = preco
   
@@ -20,11 +20,12 @@ while True:
   if preco > 1000:
     caro += 1
 
-  if preco < barato:
-    mais_barato = produto
-    barato = preco
-
-  continuar = input("Deseja continuar o cadastro dos produtos? [S/N] ").strip().upper()[0]
+  while True:
+    continuar = input("Deseja continuar o cadastro dos produtos? [S/N] ").strip().upper()[0]
+    if continuar != "S" and continuar != "N":
+      print("[ERRO] Digite uma opção válida.")
+    else:
+      break
 
   if continuar == "N":
     break

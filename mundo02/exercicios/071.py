@@ -4,23 +4,23 @@
 
 valor_em_caixa = [50, 20, 10, 1]
 cedula_50 = cedula_20 = cedula_10 = cedula_1 = 0
+saque = int(input("Valor a ser sacado: R$").strip())
 
 while True:
-  saque = int(input("Valor a ser sacado: R$").strip())
-  while saque > 0:
-    if saque >= valor_em_caixa[0]:
-      saque -= 50
-      cedula_50 += 1
-    elif saque >= valor_em_caixa[1]:
-      saque -= 20
-      cedula_20 += 1
-    elif saque >= valor_em_caixa[2]:
-      saque -= 10
-      cedula_10 += 1
-    elif saque >= valor_em_caixa[3]:
-      saque -= 1
-      cedula_1 += 1
-  break
+  if saque >= valor_em_caixa[0]:
+    saque -= 50
+    cedula_50 += 1
+  elif saque >= valor_em_caixa[1]:
+    saque -= 20
+    cedula_20 += 1
+  elif saque >= valor_em_caixa[2]:
+    saque -= 10
+    cedula_10 += 1
+  elif saque >= valor_em_caixa[3]:
+    saque -= 1
+    cedula_1 += 1
+  else:
+    break
 
 print(f"""Foram usadas: 
 {cedula_50} cédulas de R$50.

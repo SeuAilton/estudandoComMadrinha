@@ -4,30 +4,32 @@
 #B) Quantos homens foram cadastrados.
 #C) Quantas mulheres tem menos de 20 anos.
 
-pessoas18 = 0
-homi = 0
-novinhas = 0
+pessoas18 = homi = novinha = 0
 
 while True:
+  idade = int(input("Qual a sua idade? ").strip())
+
   while True:
     sexo = input("Qual o seu sexo?[M/F] ").strip().upper()[0]
     if sexo != "F" and sexo != "M":
       print("[ERRO] Digite uma opção válida.")
     else:
       break
-  
-  idade = int(input("Qual a sua idade? ").strip())
 
   if idade > 18:
     pessoas18 += 1
   
-  if sexo == "F":
-    if idade < 20:
-      novinhas += 1
+  if sexo == "F" and idade < 20:
+    novinhas += 1
   else:
     homi += 1
 
-  continuar = input("Deseja continuar o cadastro?[S/N] ").strip().upper()[0]
+  while True:
+    continuar = input("Deseja continuar o cadastro?[S/N] ").strip().upper()[0]
+    if continuar != "S" and continuar != "N":
+      print("[ERRO] Digite uma opção válida.")
+    else:
+      break
 
   if continuar == "N":
     break
