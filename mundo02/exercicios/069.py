@@ -11,8 +11,7 @@ while True:
 
   while True:
     sexo = input("Qual o seu sexo?[M/F] ").strip().upper()[0]
-    if sexo != "F" and sexo != "M":
-      print("[ERRO] Digite uma opção válida.")
+    if sexo != "F" and sexo != "M": print("[ERRO] Digite uma opção válida.")
     else:
       break
 
@@ -20,7 +19,7 @@ while True:
     pessoas18 += 1
   
   if sexo == "F" and idade < 20:
-    novinhas += 1
+    novinha += 1
   else:
     homi += 1
 
@@ -36,5 +35,5 @@ while True:
 
 print(f"Pessoas com mais de 18 anos: {pessoas18}.")
 print(f"Homens cadastrados no sistema: {homi}.")
-print(f"Mulheres cadastradas com menos de 20 anos: {novinhas}.")
+print(f"Mulheres cadastradas com menos de 20 anos: {novinha}.")
 
