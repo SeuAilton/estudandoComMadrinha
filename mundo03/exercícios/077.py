@@ -5,10 +5,10 @@
 
 palavras = ("preludio", "madrinha", "moka", "jubs", "lemos")
 vogais = "aeiou"
-vogais_encontradas = []
 
 for palavra in palavras:
-  for vogal in palavra:
-    if vogal in vogais:
-      vogais_encontradas.append(vogal)
+  print(f"\nNa palavra {palavra.capitalize()} temos: ",end="")
+  for letra in palavra:
+    if letra in vogais:
+      print(letra, end=" ")
 
