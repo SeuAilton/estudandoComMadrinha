@@ -8,10 +8,9 @@
 produto = ("Linguiça", 69, "Pão de queijo", 4, 
            "Goiabada", 20, "Doce de leite", 10)
 
-
 for count in range(0,len(produto),2):
   comida = produto[count]
   valor = produto[count+1]
-  print(f"{comida} R${valor:.2f}")
+  print(f"{comida:.<30} R${valor:>5.2f}")
 
 

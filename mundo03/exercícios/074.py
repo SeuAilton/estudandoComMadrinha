@@ -6,7 +6,8 @@
 
 from random import randint
 
-tupla = tuple(randint(0, 100) for i in range(5))
+#tupla = tuple(randint(0, 100) for i in range(5))
+tupla = (randint(0, 100), randint(0, 100), randint(0, 100), randint(0, 100), randint(0, 100))
 
 print(tupla)
 

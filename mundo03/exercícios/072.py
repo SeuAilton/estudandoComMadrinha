@@ -15,8 +15,9 @@ while True:
   if n < 0 or n > 20:
     print("[ERRO]Digite um número válido!")
   else:
-    break
-
-indice = tupla[n]
-print(f"O número {n} por extenso é: {indice}")
+    indice = tupla[n]
+    print(f"O número {n} por extenso é: {indice}")
+    c = input("Deseja continuar? [S/N]").strip().upper()
+    if c == "N":
+      break
 

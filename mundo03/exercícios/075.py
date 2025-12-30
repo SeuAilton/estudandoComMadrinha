@@ -5,7 +5,12 @@
 # B) Em que posição foi digitado o primeiro valor 3.
 # C) Quais foram os números pares.
 
-tupla = tuple(int(input("Número: ").strip()) for x in range(4))
+#tupla = tuple(int(input("Número: ").strip()) for x in range(4))
+
+tupla = (int(input("Número: ").strip()),
+         int(input("Número: ").strip()),
+         int(input("Número: ").strip()),
+         int(input("Número: ").strip()))
 
 valor9 = tupla.count(9)
 if 3 in tupla:
