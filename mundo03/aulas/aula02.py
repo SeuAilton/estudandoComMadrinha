@@ -37,8 +37,8 @@ for c, v in enumerate(valores):
 
 numeros = list()
 
-#for cont in range(0, 5):
-#  numeros.append(int(input("Digite um valor: ").strip()))
+for cont in range(0, 5):
+  numeros.append(int(input("Digite um valor: ").strip()))
 
 print(numeros)
 
