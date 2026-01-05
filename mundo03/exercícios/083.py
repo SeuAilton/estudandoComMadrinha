@@ -4,3 +4,18 @@
 # expressão passada está com os parênteses abertos e fechados na
 # ordem correta.
 
+ex = input("Expressão: ").strip().replace(" ", "").split()
+lista = list(ex[0])
+c = 0
+
+for v in lista:
+  if v == "(":
+    c += 1
+  elif v == ")":
+    c -= 1
+
+if c == 0:
+  print(f"A expressão {ex} está correta.")
+else:
+  print(f"A expressão {ex} está errada.")
+    
