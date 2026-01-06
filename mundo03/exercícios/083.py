@@ -4,8 +4,8 @@
 # expressão passada está com os parênteses abertos e fechados na
 # ordem correta.
 
-ex = input("Expressão: ").strip().replace(" ", "").split()
-lista = list(ex[0])
+ex = input("Expressão: ").strip().replace(" ", "")
+lista = list(ex)
 c = 0
 
 for v in lista:
