@@ -15,7 +15,7 @@ while True:
     print("Número repetido!")
   while True:
     continuar = input("Deseja continuar? [S/N] ").strip().upper()[0]
-    if continuar != "S" and continuar != "N":
+    if continuar not in "SN":
       print("[ERRO]Digite um valor válido!")
     else:
       break

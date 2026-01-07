@@ -5,9 +5,8 @@
 # suas respectivas posições na lista.
 
 lista = []
-
-pMax = 0
-pMin = 0
+pMax = []
+pMin = []
 
 for count in range(0, 5):
   lista.append(int(input("Digite um número: ").strip()))
@@ -16,13 +15,10 @@ maior = max(lista)
 menor = min(lista)
 
 for c, v in enumerate(lista):
-  if c == 0:
-    pMax = c
-    pMin = c
-  elif v < pMin:
-    pMin = c
+  if v == maior:
+    pMax.append(c)
   else:
-    pMax = c
+    pMin.append(c)
 
 print(f"O maior número é {maior} na posição {pMax}.")
 print(f"O menor número é {menor} na posição {pMin}.")

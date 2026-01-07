@@ -12,7 +12,7 @@ while True:
   numero = lista.append(int((input("Número: ").strip())))
   while True:
     continuar = input("Deseja continuar? [S/N]").strip().upper()[0]
-    if continuar != "S" and continuar != "N":
+    if continuar not in "SN":
       print("[ERRO]Digite um valor válido!")
     else:
       break
@@ -20,8 +20,7 @@ while True:
     break
 
 tamanho = len(lista)
-crescente = lista.sort()
-decrescente = lista[::-1]
+lista.sort(reverse=True)
 
 if 5 in lista:
   print("Tem o número 5 na lista.")
@@ -29,5 +28,5 @@ else:
   print("Não foi digitado nenhum número 5.")
 
 print(f"Foram digitados {tamanho} números.")
-print(decrescente)
+print(lista)
 

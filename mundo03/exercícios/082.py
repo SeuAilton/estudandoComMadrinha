@@ -18,7 +18,7 @@ while True:
     listai.append(numero)
   while True:
     continuar = input("Desaja continuar? [S/N]").strip().upper()[0]
-    if continuar != "S" and continuar != "N":
+    if continuar not in "SN":
       print("[ERRO]Digite uma opção válida!")
     else:
       break
