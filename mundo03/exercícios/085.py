@@ -5,3 +5,21 @@
 # pares e ímpares. No final, mostre os valores
 # pares e ímpares em ordem crescente.
 
+lista = list()
+par = list()
+impar = list()
+
+for n in range(0, 7):
+  numero = int(input("Número: ").strip())
+  if numero % 2 == 0:
+    par.append(numero)
+  else:
+    impar.append(numero)
+
+lista.append(par[:])
+lista.append(impar[:])
+lista.sort()
+
+print(f"Números pares: {lista[0]}")
+print(f"Número ímpares: {lista[1]}")
+

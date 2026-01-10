@@ -4,3 +4,31 @@
 # B) A soma dos valores da terceira coluna.
 # C) O maior valor da segunda linha.
 
+lista = list()
+controle = list()
+par = 0
+soma = 0
+
+for n in range(0, 9):
+  numeros = int(input("Número: ").strip())
+  controle.append(numeros)
+  lista.append(controle[:])
+  if numeros % 2 == 0:
+    par += numeros
+  if n == 2 or n == 5 or n == 8:
+    soma += numeros
+  controle.clear()
+
+print(f"""
+      {lista[0]}{lista[1]}{lista[2]}
+      {lista[3]}{lista[4]}{lista[5]}
+      {lista[6]}{lista[7]}{lista[8]}
+      """)
+
+segunda_linha = lista[3] + lista[4] + lista[5]
+maior_valor = max(segunda_linha)
+
+print(f"Soma de todos os valores pares: {par}")
+print(f"Soma dos valores da terceira coluna: {soma}")
+print(f"Maior valor da segunda linha: {maior_valor}")
+
