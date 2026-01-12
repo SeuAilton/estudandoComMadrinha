@@ -9,12 +9,20 @@
 lista = list()
 lista_info = list()
 cadastros = 0
-pesadas = list()
-leves = list()
+maior = menor = 0
+pesados = []
+leves = []
 
 while True:
   lista_info.append(input("Nome: ").strip())
   lista_info.append(float(input("Peso: ").strip()))
+  if len(lista) == 0:
+    maior = menor = lista_info[1]
+  else:
+    if lista_info[1] > maior:
+      maior = lista_info[1]
+    if lista_info[1] < menor:
+      menor = lista_info[1]
   lista.append(lista_info[:])
   lista_info.clear()
   while True:
@@ -29,18 +37,12 @@ while True:
 for d in lista:
   if d[0]:
     cadastros += 1
+  if d[1] == maior:
+    pesados.append(d[0])
+  if d[1] == menor:
+    leves.append(d[0])
 
-mais_pesadas = max(lista)
-mais_leves = min(lista)
-
-for v in lista:
-  if v[1] == mais_pesadas[1]:
-    pesadas.append(v[0])
-  elif v[1] == mais_leves[1]:
-    leves.append(v[0])
-
-print(lista)
+print(f"As pessoas mais pesadas são: {pesados}")
+print(f"As pessoas mais leves são: {leves}")
 print(f"Foram cadastradas {cadastros} pessoas.")
-print("As pessoas mais pesadas são: \n", pesadas)
-print("As pessoas mais leves são: \n", leves)
 

@@ -18,7 +18,8 @@ for n in range(0, 7):
 
 lista.append(par[:])
 lista.append(impar[:])
-lista.sort()
+lista[0].sort()
+lista[1].sort()
 
 print(f"Números pares: {lista[0]}")
 print(f"Número ímpares: {lista[1]}")

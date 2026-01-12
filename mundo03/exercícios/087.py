@@ -20,9 +20,9 @@ for n in range(0, 9):
   controle.clear()
 
 print(f"""
-      {lista[0]}{lista[1]}{lista[2]}
-      {lista[3]}{lista[4]}{lista[5]}
-      {lista[6]}{lista[7]}{lista[8]}
+      [ {lista[0][0]} ] [ {lista[1][0]} ] [ {lista[2][0]} ]
+      [ {lista[3][0]} ] [ {lista[4][0]} ] [ {lista[5][0]} ]
+      [ {lista[6][0]} ] [ {lista[7][0]} ] [ {lista[8][0]} ]
       """)
 
 segunda_linha = lista[3] + lista[4] + lista[5]
