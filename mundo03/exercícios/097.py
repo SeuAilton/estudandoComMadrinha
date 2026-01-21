@@ -9,3 +9,13 @@
 # Olá, Mundo!
 # ~~~~~~~~~~~
 
+def escreva(texto):
+  print("~" * len(texto))
+  
+
+trem = input("Texto qualquer: ").strip()
+
+escreva(trem)
+print(trem)
+escreva(trem)
+
