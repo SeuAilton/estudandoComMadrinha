@@ -5,10 +5,12 @@
 # a) De 1 até 10, de 1 em 1
 # b) De 10 até 0, de 2 em 2
 # c) Uma contagem personalizada.
+from time import sleep
 
 def contador(inicio, fim, passo):
   for p in range(inicio, fim, passo):
-    print(p, end=" ")
+    print(p, end=" ", flush=True)
+    sleep(0.5)
   print()
 
 
@@ -22,7 +24,7 @@ print("-" * 30)
 print("Personalize a contagem!")
 i = int(input("Início: ").strip())
 f = int(input("Fim: ").strip())
-p = int(input("Passo: "))
+p = int(input("Passo: ").strip())
 print("-" * 30)
 
 if f < 0:

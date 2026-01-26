@@ -3,6 +3,7 @@
 # vários parâmetros com valores inteiros.
 # Seu programa tem que analisar todos os valores e dizer qual deles
 # é o maior
+from time import sleep
 
 def maior(*num):
   return list(map(max, num))
@@ -15,10 +16,11 @@ print("-" * 40)
 while c < len(n):
   print("Analizando os valores passados...")
   for v in n[c]:
-    print(v, end=" ")
+    print(v, end=" ", flush=True)
+    sleep(0.3)
   print()
   print(f"Foram informados {len(n[c])} valores ao todo.")
   print(f"O maior valor informado foi {maior(n[c])}")
   print("-" * 40)
   c += 1
-  
+

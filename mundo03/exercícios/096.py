@@ -7,6 +7,7 @@ def area(largura, comprimento):
   metro_quadrado = largura * comprimento
   return metro_quadrado
 
+
 larg = float(input("Largura:(m²) ").strip())
 comp = float(input("Comprimento:(m²) ").strip())
 
