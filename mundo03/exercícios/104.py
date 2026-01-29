@@ -5,3 +5,18 @@
 # Ex:
 # n = leiaInt("Digite um n")
 
+def leiaInt(string, *args):
+  while True:
+    print(string, end=" ")
+    try:
+      numero = int(input(*args))
+      if numero:
+        break
+    except ValueError:
+      print("[ERRO]Digite um número inteiro!")
+  return numero
+
+
+n = leiaInt("Digite um número:")
+print(f"Você digitou o número {n}")
+
