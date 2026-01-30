@@ -3,6 +3,7 @@
 # O usuário vai digitar o comando e o manual vai aparecer.
 # Quando o usuário digitar a palavra "FIM", o programa se encerrará.
 # OBS: use cores.
+import pydoc
 
 def ajuda():
   while True:
@@ -13,7 +14,8 @@ def ajuda():
     if escolha in "FIMfim":
       break
     else:
-      print(escolha.__doc__)
+      doc = pydoc.render_doc(escolha)
+      print(doc)
 
 
 ajuda()
