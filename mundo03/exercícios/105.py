@@ -9,6 +9,12 @@
 # Adicione também as docstrings da função.
 
 def notas(*n, sit=False):
+  """
+  -> Função para analizar notas e situação de vários alunos.
+  :param n: uma ou mais notas dos alunos
+  :param sit: valor opcional, indicando se deve ou não adicionar a situação.
+  :return: dicionário com várias informações sobre a situação da turma.
+  """
   notas = []
   c = 0
   for numeros in n:
