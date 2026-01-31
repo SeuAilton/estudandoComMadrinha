@@ -42,5 +42,5 @@ def notas(*n, sit=False):
      return dicionario
 
 
-print(notas(3,5.6,2.5,8, sit=True))
+print(notas(3,5.6,2.5,8))
 
