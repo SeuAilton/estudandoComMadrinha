@@ -4,7 +4,7 @@
 # Quando o usuário digitar a palavra "FIM", o programa se encerrará.
 # OBS: use cores.
 import pydoc
-print(print.__doc__)
+
 def ajuda():
   while True:
     print("-" * 25)
