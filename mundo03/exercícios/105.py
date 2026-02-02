@@ -31,16 +31,13 @@ def notas(*n, sit=False):
   if sit:
     if media >= 7:
       dicionario["situação"] = "BOA"
-      return dicionario
-    if media >= 5:
+    elif media >= 5 and media < 7:
       dicionario["situação"] = "RAZOÁVEL"
-      return dicionario
     else:
       dicionario["situação"] = "RUIM"
-      return dicionario
-  else:
-     return dicionario
+  
+  return dicionario
 
 
-print(notas(3,5.6,2.5,8))
+print(notas(5,5,5,4, sit=True))
 
