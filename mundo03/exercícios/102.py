@@ -3,7 +3,6 @@
 # o primeiro que indique o número a calcular e o outro chamado show,
 # que será um valor lógico (opcional) indicando se será mostrado ou não
 # na tela o processo de cálculo do fatorial.
-from time import sleep
 
 def fatorial(value, show=False):
   """
@@ -12,6 +11,7 @@ def fatorial(value, show=False):
   :param show: (opcional) Mostrar ou não a conta.
   :return: O valor do Fatorial de um número value.
   """
+  from time import sleep
   resultado = 1
   c = 1
   processo = []
@@ -25,13 +25,12 @@ def fatorial(value, show=False):
       print(v, end="..", flush=True)
       sleep(0.5)
     print("FIM.")
-  else:
-    print(f"O fatorial de {value} é: {resultado}")
+  return f"O fatorial de {value} é: {resultado}"
 
 
 while True:
   numero = int(input("Digite um número: ").strip())
-  fatorial(numero)
+  print(fatorial(numero))
   while True:
     processo = input("Deseja mostrar o processo?[s/n] ").strip().lower()[0]
     if processo not in "sn":
