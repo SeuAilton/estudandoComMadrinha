@@ -13,7 +13,7 @@ def leiaInt(string, *args):
       if numero:
         break
     except ValueError:
-      print("[ERRO]Digite um número inteiro!")
+      print("\033[0;31m[ERRO]Digite um número inteiro!\033[m")
   return numero
 
 

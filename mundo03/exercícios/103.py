@@ -15,5 +15,10 @@ def ficha(jogador=None, gols=None):
 nome = input("Nome do jogador: ").strip().capitalize()
 gols = input("Gols no campeonato: ").strip()
 
+if gols.isnumeric():
+  gols = int(gols)
+else:
+  gols = 0
+
 print(ficha(nome, gols))
 
