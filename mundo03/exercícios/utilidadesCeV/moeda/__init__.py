@@ -1,29 +1,25 @@
 def moeda(n):
-  return f"R${n:.2f}"
+  return f"R${n:.2f}".replace('.', ',')
 
 
-def metade(n, formatado=False):
-  if formatado:
-    return moeda(n / 2)
-  return n / 2
+def metade(n=0, formatado=False):
+  res = n / 2
+  return res if not formatado else moeda(res)
 
 
-def dobro(n, formatado=False):
-  if formatado:
-    return moeda(n * 2)
-  return n * 2
+def dobro(n=0, formatado=False):
+  res = n * 2
+  return res if not formatado else moeda(res)
 
 
-def aumento(n, per=0, formatado=False):
-  if formatado:
-    return moeda(n + (per / 100) * n)
-  return n + (per / 100) * n
+def aumento(n=0, per=0, formatado=False):
+  res = n + (per / 100) * n
+  return res if not formatado else moeda(res)
 
 
-def reduzir(n, per=0, formatado=False):
-  if formatado:
-    return moeda(n - (per / 100) * n)
-  return n - (per / 100) * n
+def reduzir(n=0, per=0, formatado=False):
+  res = n - (per / 100) * n
+  return res if not formatado else moeda(res)
 
 
 def titulo(msg):
@@ -36,11 +32,11 @@ def titulo(msg):
 
 def resumo(n, a, r):
   return print(f"""{titulo("RESUMO DO VALOR")}
-Preço analizado:  {moeda(n).replace('.', ',')}
-Dobro do preço:   {dobro(n, True).replace('.', ',')}
-Metade do preço:  {metade(n, True).replace('.', ',')}
-{a}% de aumento:   {aumento(n, a, True).replace('.', ',')}
-{r}% de redução:   {reduzir(n, r, True).replace('.', ',')}
+Preço analizado:  {moeda(n)}
+Dobro do preço:   {dobro(n, True)}
+Metade do preço:  {metade(n, True)}
+{a}% de aumento:   {aumento(n, a, True)}
+{r}% de redução:   {reduzir(n, r, True)}
 {'-' * 29}
 """
 )
