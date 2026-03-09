@@ -11,10 +11,25 @@ def leiaInt(string, *args):
       if numero:
         break
     except ValueError:
-      print("\033[0;31m[ERRO]Digite um número inteiro!\033[m")
+      print("\033[0;31m[ERRO]Digite um número inteiro válido!\033[m")
   return numero
 
 
-n = leiaInt("Digite um número:")
-print(f"Você digitou o número {n}")
+def leiaFloat(string, *args):
+  while True:
+    print(string, end=" ")
+    try:
+      numero = input(*args)
+      numero_tratado = numero.replace(",", ".")
+      numero_final = float(numero_tratado)
+      if numero_final:
+        break
+    except ValueError:
+      print("\033[0;31m[ERRO]Digite um número decimal válido!\033[m")
+  return numero_final
+
+
+i = leiaInt("Digite um número inteiro:")
+f = leiaFloat("Digite um número decimal:")
+print(f"Você digitou o número inteiro {i} e o número decimal {f:.1f}")
 
