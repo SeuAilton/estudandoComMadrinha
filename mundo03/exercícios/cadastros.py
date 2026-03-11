@@ -34,7 +34,7 @@ def menu():
           break
         else:
           print("\033[0;31m[ERRO]Digite uma opção válida!\033[m")
-      except Exception:
+      except ValueError:
         print("\033[0;31m[ERRO]Digite uma opção válida!\033[m")
     if escolha == 1:
       if len(pessoas) == 0:
@@ -43,9 +43,9 @@ def menu():
         print("-" * 30)
         print(" \033[0;32mLista de pessoas cadastradas\033[m")
         print("-" * 30)
-      for a in pessoas:
-        print(f"{a['nome']:.<22}", end=" ")
-        print(f"{a['idade']} anos")
+        for a in pessoas:
+          print(f"{a['nome']:.<22}", end=" ")
+          print(f"{a['idade']} anos")
     if escolha == 2:
       adicionar()
     if escolha == 3:
