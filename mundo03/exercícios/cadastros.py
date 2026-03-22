@@ -1,5 +1,10 @@
 def adicionar():
-  nome = input("Nome: ").strip().capitalize()
+  while True:
+    nome = input("Nome: ").strip().capitalize()
+    if nome == "":
+      print("\033[0;31m[ERRO]Digite um nome!\033[m")
+    else:
+      break
   while True:
     try:
       idade = int(input("Idade: ").strip())
@@ -23,7 +28,7 @@ def menu():
 {'-' * 30}
 \033[0;33m1\033[m - \033[0;34mVer pessoas cadastradas\033[m
 \033[0;33m2\033[m - \033[0;34mCadastrar nova Pessoa\033[m
-\033[0;32m3\033[m - \033[0;34mSair do sistema\033[m
+\033[0;33m3\033[m - \033[0;34mSair do sistema\033[m
 {'-' * 30}
 """)
     while True:
