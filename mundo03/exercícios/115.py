@@ -5,5 +5,5 @@
 # pessoas cadastradas.
 from cadastros import menu
 
-menu()
+menu.menu()
 
